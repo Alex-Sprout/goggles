@@ -1,4 +1,4 @@
-! name: Restrict
+! name: Restrict to authoritative sites
 ! description: Rerank content to boost sites which provide Acquistion value
 ! public: false
 ! author: Sprout Technologies LLC
