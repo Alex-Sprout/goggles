@@ -4,7 +4,7 @@
 ! author: Sprout Technologies LLC
 
 ! Remove results not matching any other rule
-$discard,site=*.wikipedia.*
+$discard,site=wikipedia.*
 
 
 ! Boost .gov and .mil websites, edu, but com and net less
