@@ -1,0 +1,31 @@
+! name: Rachael
+! description: Rerank content to boost sites which provide Rachael Value
+! public: false
+! author: Sprout Technologies LLC
+
+! Remove results not matching any other rule
+$discard,site=*.wikipedia.*
+
+
+! Boost .gov and .mil websites, edu, but com and net less
+.gov|$boost=4
+.mil|$boost=4
+.com|$boost=2
+.net|$boost=2
+.edu|$boost=3
+
+! Boost specific websites
+$site=wdmmw.org$boost=3
+$site=USNI.org$boost=4
+$site=nationaldefensemagazine.org$boost=4
+$site=rand.org$boost=4
+$site=csbaonline.org$boost=4
+$site=janes.com$boost=4
+$site=csis.org$boost=4
+$site=naval-technology.com$boost=4
+$site=maritime-executive.com$boost=4
+$site=thedefensepost.com$boost=4
+$site=apnews.com/hub/us-department-of-defense$boost=4
+$site=breakingdefense.com$boost=4
+$site=nps.edu$boost=4
+$site=defensenews.com$boost=4

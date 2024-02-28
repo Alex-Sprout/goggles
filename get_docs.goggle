@@ -1,0 +1,45 @@
+! name: getDocs
+! description: Only fetch files in PDF, .doc, .docx, .odt, .xlxs, .csv, etc.
+! public: false
+! author: Sprout Technologies LLC
+
+! Remove results not matching any other rule
+$discard
+
+! KILL WIKIPEDIA RESULTS
+$discard,site=*.wikipedia.*
+
+! Boost .gov files
+*.gov/*.pdf|$boost=5
+*.gov/*.pptx|$boost=4
+*.gov/*.doc|$boost=4
+*.gov/*.xlxs|$boost=3
+*.gov/*.ppt|$boost=3
+*.gov/*.docx|$boost=2
+*.gov/*.odt|$boost=2
+*.gov/*.csv|$boost=2
+*.gov/*.jpg|$boost=1
+*.gov/*.gif|$boost=1
+*.gov/*.jpeg|$boost=1
+*.gov/*.heic|$boost=1
+*.gov/*.png|$boost=1
+
+! Boost .edu files
+*.edu/*.pdf|$boost=5
+*.edu/*.pptx|$boost=4
+*.edu/*.doc|$boost=4
+*.edu/*.xlxs|$boost=3
+*.edu/*.ppt|$boost=3
+*.edu/*.docx|$boost=2
+*.edu/*.odt|$boost=2
+*.edu/*.csv|$boost=2
+*.edu/*.jpg|$boost=1
+*.edu/*.gif|$boost=1
+*.edu/*.jpeg|$boost=1
+*.edu/*.heic|$boost=1
+*.edu/*.png|$boost=1
+
+! Boost .mil files
+! Boost .org files
+! Boost .com files
+! Boost .net files
